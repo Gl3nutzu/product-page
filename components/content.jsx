@@ -70,9 +70,9 @@ const Content = () => {
             <div className="flex h-20 p-4 md:p-0 justify-between md:mx-16 md:border-gray-300 md:border-b-2">
                 <div className="flex items-center">
                     <button onClick={() => setOpen(!open)} className="md:hidden mr-6 z-50">
-                        <Image src={open ? Close : Menu} layout="fixed"></Image>
+                        <Image src={open ? Close : Menu} alt="open" layout="fixed"></Image>
                     </button>
-                    <Image src={Logo} layout="fixed"></Image>
+                    <Image src={Logo} alt="logo" layout="fixed"></Image>
                     <ul className={`${open ? "absolute bg-white left-0 pl-[2rem] pr-[12rem] font-bold" : "hidden"} pt-[14rem] z-40 md:pt-0 md:pl-0 md:pr-0 md:static md:flex md:justify-between md:gap-6 md:ml-12 md:text-gray-400 md:font-normal`}>
                         <li className={`${open ? "mb-2" : ""} md:mb-0 md:hover:text-black md:hover:border-b-2 md:hover:border-orange-400`}><Link href="/">Collections</Link></li>
                         <li className={`${open ? "mb-2" : ""} md:mb-0 md:hover:text-black md:hover:border-b-2 md:hover:border-orange-400`}><Link href="/">Man</Link></li>
@@ -84,7 +84,7 @@ const Content = () => {
                 <div className="mr-4 flex gap-8 items-center">
                     <div>
                         <button onClick={() => setCartOpen(!cartopen)}>
-                            <Image src={Cart} layout="fixed"></Image>
+                            <Image src={Cart} alt="cart" layout="fixed"></Image>
                             {cartitems ? <span className="bg-orange-500 rounded-lg text-xs absolute w-[1.5rem] text-white font-medium -translate-x-1/3 -translate-y-1/3">{cartitems}</span> : ""}
                         </button>
                         <div className={`${cartopen ? "flex flex-col absolute w-[90%] mx-[5%] md:right-0 md:w-[25rem] bg-white rounded-xl z-30 left-0 md:left-auto translate-y-8 md:translate-y-6 drop-shadow-[0_20px_20px_rgb(0,0,0,0.3)]" : "hidden"}`}>
@@ -97,13 +97,13 @@ const Content = () => {
                                 : 
                                 <div className="p-6">
                                     <div className="flex justify-between">
-                                        <Image src={p11} width={50} height={50} objectFit="contain" className="rounded-lg"></Image>
+                                        <Image src={p11} alt="1" width={50} height={50} objectFit="contain" className="rounded-lg"></Image>
                                         <div>
                                             <h1 className="text-gray-400">Fall Limited Edition Sneakers</h1>
                                             <h3 className="text-gray-400">$125.00 x {cartitems} <span className="text-black font-bold">${125*cartitems}.00</span></h3>
                                         </div>
                                         <button onClick={() => setCartItems(0)}>
-                                            <Image src={dcart} layout="fixed"></Image>
+                                            <Image src={dcart} alt="cart" layout="fixed"></Image>
                                         </button>
                                     </div>
                                     <button className="bg-orange-500 text-white mt-6 w-full py-4 rounded-lg">Checkout</button>
@@ -113,35 +113,35 @@ const Content = () => {
                         </div>
                     </div>
                     <button onClick={() => setCartOpen(!cartopen)}>
-                        <Image src={Avatar} width={35} height={35} className={`${cartopen ? "border-[2px] border-orange-400 debug" : ""} rounded-full`}></Image>
+                        <Image src={Avatar} alt="avatar" width={35} height={35} className={`${cartopen ? "border-[2px] border-orange-400 debug" : ""} rounded-full`}></Image>
                     </button>
                 </div>
             </div>
             <div className="md:grid md:grid-cols-2 md:grid-rows-1 md:my-20 md:mx-8 z-30">
                 <div className="relative grid items-center">
                     <div className="md:grid md:justify-center">
-                        <Image className="md:rounded-2xl" src={photo} width={380} height={380} layout={"responsive"}></Image>
+                        <Image className="md:rounded-2xl" alt="prv" src={photo} width={380} height={380} layout={"responsive"}></Image>
                         <div className="hidden md:grid md:grid-cols-4 md:grid-rows-1 md:gap-3 md:mt-6">
                             <button onClick={() => {setPhoto(p1); setCount(1)}}>
-                                <Image src={p11} width={80} height={80} objectFit="contain" className={`${count === 1 ? "md:border-[2px] md:border-orange-400 debug" : ""} md:rounded-2xl`}></Image>
+                                <Image src={p11} alt="1" width={80} height={80} objectFit="contain" className={`${count === 1 ? "md:border-[2px] md:border-orange-400 debug" : ""} md:rounded-2xl`}></Image>
                             </button>
                             <button onClick={() => {setPhoto(p2); setCount(2)}}>
-                                <Image src={p22} width={80} height={80} objectFit="contain" className={`${count === 2 ? "md:border-[2px] md:border-orange-400 debug" : ""} md:rounded-2xl`}></Image>
+                                <Image src={p22} alt="2" width={80} height={80} objectFit="contain" className={`${count === 2 ? "md:border-[2px] md:border-orange-400 debug" : ""} md:rounded-2xl`}></Image>
                             </button>
                             <button onClick={() => {setPhoto(p3); setCount(3)}}>
-                                <Image src={p33} width={80} height={80} objectFit="contain" className={`${count === 3 ? "md:border-[2px] md:border-orange-400 debug" : ""} md:rounded-2xl`}></Image>
+                                <Image src={p33} alt="3" width={80} height={80} objectFit="contain" className={`${count === 3 ? "md:border-[2px] md:border-orange-400 debug" : ""} md:rounded-2xl`}></Image>
                             </button>
                             <button onClick={() => {setPhoto(p4); setCount(4)}}>
-                                <Image src={p44} width={80} height={80} objectFit="contain" className={`${count === 4 ? "md:border-[2px] md:border-orange-400 debug" : ""} md:rounded-2xl`}></Image>
+                                <Image src={p44} alt="4" width={80} height={80} objectFit="contain" className={`${count === 4 ? "md:border-[2px] md:border-orange-400 debug" : ""} md:rounded-2xl`}></Image>
                             </button>
                         </div>
                     </div>
                     <div className="absolute flex w-full justify-between md:hidden">
                         <button onClick={() => slide(-1)} className="bg-white w-10 h-10 rounded-full flex justify-center items-center ml-4">
-                            <Image src={prev} layout={"fixed"}></Image>
+                            <Image src={prev} alt="prev" layout={"fixed"}></Image>
                         </button>
                         <button onClick={() => slide(+1)} className="bg-white w-10 h-10 rounded-full flex justify-center items-center mr-4">
-                            <Image src={nextarr} layout={"fixed"}></Image>
+                            <Image src={nextarr} alt="nxt" layout={"fixed"}></Image>
                         </button>
                     </div>
                 </div>
@@ -149,7 +149,7 @@ const Content = () => {
                     <div className="p-6">
                         <h2 className="text-orange-400 font-bold">SNEAKER COMPANY</h2>
                         <h1 className="font-semibold text-4xl md:text-5xl md:font-bold mt-2">Fall Limited Edition Sneakers</h1>
-                        <p className="text-gray-500 mt-4">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll witherstand everything the weather can offer.</p>
+                        <p className="text-gray-500 mt-4">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they will witherstand everything the weather can offer.</p>
                         <div className="flex md:block items-center justify-between mt-4">
                             <div className="flex items-center">
                                 <h1 className="font-bold text-4xl">$125.00</h1>
@@ -167,7 +167,7 @@ const Content = () => {
                             </div>
                         </div>
                         <button onClick={() => setCartItems(cartitems+items)} className="flex justify-center bg-orange-400 text-white w-10/12 md:w-4/6 m-auto my-6 md:my-0 rounded-xl py-4 gap-4 drop-shadow-[0_20px_20px_rgb(255,126,0,0.2)] active:bg-orange-200">
-                            <Image src={cart} layout={"fixed"}></Image>
+                            <Image src={cart} layout={"fixed"} alt="cart"></Image>
                             <h1 className="font-semibold">Add to cart</h1>
                         </button>
                     </div>
