@@ -17,10 +17,10 @@ import prev from "../images/icon-previous.svg"
 import dcart from "../images/icon-delete.svg"
 
 import Image from "next/image";
-import { useState } from "react"
-import Link from "next/link"
+import { useState } from "react";
+import Link from "next/link";
 
-const content = () => {
+const Content = () => {
     
     const [count, setCount] = useState(1);
     const [photo, setPhoto] = useState(p1);
@@ -177,4 +177,4 @@ const content = () => {
     );
 }
 
-export default content;
+export default Content;
