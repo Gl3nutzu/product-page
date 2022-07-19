@@ -18,6 +18,7 @@ import dcart from "../images/icon-delete.svg"
 
 import Image from "next/image";
 import { useState } from "react"
+import Link from "next/link"
 
 const content = () => {
     
@@ -73,11 +74,11 @@ const content = () => {
                     </button>
                     <Image src={Logo} layout="fixed"></Image>
                     <ul className={`${open ? "absolute bg-white left-0 pl-[2rem] pr-[12rem] font-bold" : "hidden"} pt-[14rem] z-40 md:pt-0 md:pl-0 md:pr-0 md:static md:flex md:justify-between md:gap-6 md:ml-12 md:text-gray-400 md:font-normal`}>
-                        <li className={`${open ? "mb-2" : ""} md:mb-0 md:hover:text-black md:hover:border-b-2 md:hover:border-orange-400`}><a href="/">Collections</a></li>
-                        <li className={`${open ? "mb-2" : ""} md:mb-0 md:hover:text-black md:hover:border-b-2 md:hover:border-orange-400`}><a href="/">Man</a></li>
-                        <li className={`${open ? "mb-2" : ""} md:mb-0 md:hover:text-black md:hover:border-b-2 md:hover:border-orange-400`}><a href="/">Women</a></li>
-                        <li className={`${open ? "mb-2" : ""} md:mb-0 md:hover:text-black md:hover:border-b-2 md:hover:border-orange-400`}><a href="/">About</a></li>
-                        <li className="md:hover:text-black md:hover:border-b-2 md:hover:border-orange-400"><a href="/">Contact</a></li>
+                        <li className={`${open ? "mb-2" : ""} md:mb-0 md:hover:text-black md:hover:border-b-2 md:hover:border-orange-400`}><Link href="/">Collections</Link></li>
+                        <li className={`${open ? "mb-2" : ""} md:mb-0 md:hover:text-black md:hover:border-b-2 md:hover:border-orange-400`}><Link href="/">Man</Link></li>
+                        <li className={`${open ? "mb-2" : ""} md:mb-0 md:hover:text-black md:hover:border-b-2 md:hover:border-orange-400`}><Link href="/">Women</Link></li>
+                        <li className={`${open ? "mb-2" : ""} md:mb-0 md:hover:text-black md:hover:border-b-2 md:hover:border-orange-400`}><Link href="/">About</Link></li>
+                        <li className="md:hover:text-black md:hover:border-b-2 md:hover:border-orange-400"><Link href="/">Contact</Link></li>
                     </ul>
                 </div>
                 <div className="mr-4 flex gap-8 items-center">
